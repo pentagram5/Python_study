@@ -1,0 +1,79 @@
+1. colors = ['red', 'blue', 'green'] 가 있을때 결과가 아래와 같이 나오도록 하세요.
+1) red
+2) green
+3) 3  ==> 리스트 길이를 출력
+
+colors = ['red','blue','green']
+print("1) %s" %colors[0],"\n2) %s" %colors[2],  "\n3) %d ==> 리스트길이를 출력" % len(colors))
+1) red 
+2) green 
+3) 3 ==> 리스트길이를 출력
+
+
+2. string = "python1" 일 때 아래와 같은 결과가 나오도록 출력해 보세요.(슬라이싱)
+
+string = "python1"
+
+string[3:]
+Out[206]: 'hon1'
+
+string[0:3]
+Out[207]: 'pyt'
+
+string[0:4]
+Out[208]: 'pyth'
+
+string[0:]
+Out[209]: 'python1'
+
+3. color1과 color2가 아래와 같을 때 3-1) ~ 3-3)의 결과가 나오도록
+color1 = ['red', 'blue', 'green']
+color2 = ['orange', 'blacke','white']
+
+color1+color2
+Out[220]: ['red', 'blue', 'green', 'orange', 'black', 'white']
+
+color1*2
+Out[221]: ['red', 'blue', 'green', 'red', 'blue', 'green']
+
+color1+color2[0:2]
+Out[222]: ['red', 'blue', 'green', 'orange', 'black']
+
+
+4. 2차원 리스트의 예이다. 각 문제의 출력되는 결과를 예측하시오.
+myList = [ [ 1,  2,  3,  4] ,
+         [5,  6,  7,  8] ,
+         [9, 10,  11, 12] ]
+
+mylist=[[1,2,3,4], [5,6,7,8], [9,10,11,12]]
+
+mylist[0][1]
+Out[226]: 2
+
+mylist[1][3]
+Out[227]: 8
+
+mylist[2]
+Out[228]: [9, 10, 11, 12]
+
+5. 다음과 같은 리스트가 있을 때, 출력 결과가 아래와 같게 해 보세요.
+test = [ '설현' , '초아' , '지민', '유나' , '유경', '혜정' , '민아', '찬미' ]
+
+test[0]
+Out[242]: '설현'
+
+test[6]
+Out[243]: '민아'
+
+test[0:1]
+Out[244]: ['설현']
+
+test[6:8]
+Out[245]: ['민아', '찬미']
+
+test[1:3]
+Out[246]: ['초아', '지민']
+
+test[1::3]
+Out[247]: ['초아', '유경', '찬미']
+
