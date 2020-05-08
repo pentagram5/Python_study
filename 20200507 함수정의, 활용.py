@@ -108,7 +108,7 @@ def dic_func(**para):
 dic_func(트와이스 =9, 소녀시대 = 7, 걸스데이 =4, 블랙핑크 =4)
 
 
-"""문제풀어보기""""
+"""문제풀어보기"""
 #두수를 곱하는 함수
 def multi2(v1,v2):
     return v1*v2
@@ -139,9 +139,13 @@ num =0
 
 while len(lotto) < 7:
     num = getnumber()
-    if lotto.count(num) ==0:
+    if lotto.count(num) == 0:
         lotto.append(num)
-   
+
 lotto.sort()
 print("당첨번호는 %s입니다!"%(lotto))
 
+import module1 as md
+md.func1()
+md.func2()
+md.func3()
