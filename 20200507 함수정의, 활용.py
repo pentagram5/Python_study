@@ -83,3 +83,23 @@ mylist = multi(200,100)
 hap = mylist[0]
 sub  = mylist[1]
 print(hap,sub)
+
+def hap(haplist):
+    tot = 0
+    for i in haplist:
+        tot+=i
+    
+    return tot 
+
+print(hap(av))
+
+
+av=[1,2,4]
+def para_func(*para):
+    result = 0
+    for num in para:
+        result += num
+    
+    return result
+
+print(para_func(av[0],av[1],av[2]))
