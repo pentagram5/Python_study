@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu May  7 16:01:38 2020
 
-@author: A
-"""
 
 def coffee(num):
     if num == 1:
@@ -103,3 +99,49 @@ def para_func(*para):
     return result
 
 print(para_func(av[0],av[1],av[2]))
+
+#딕셔너리 형태의 매개변수를 키= 값으로 사용할 수 있다.
+def dic_func(**para):
+    for k in para.keys():
+        print("%s --> %d명입니다. " %(k, para[k]))
+
+dic_func(트와이스 =9, 소녀시대 = 7, 걸스데이 =4, 블랙핑크 =4)
+
+
+"""문제풀어보기""""
+#두수를 곱하는 함수
+def multi2(v1,v2):
+    return v1*v2
+
+a = multi2(200,88)
+print(a)
+
+#입력받은 수중 가장 큰 값을 출력하는 함수 
+def maxnum(*para):
+    max =0
+    for num in para:
+        if max < num:
+           max = num
+     
+    return max
+
+a = maxnum(1,23,4,2351,34,135)
+print(a)
+
+#random 패키지 생성 후 난수 생성 -> 로또로 사용해보기 
+import random
+
+def getnumber():
+    return random.randrange(1,46)
+    #난수 발생 범위를 지정해준다. 
+lotto=[]
+num =0
+
+while len(lotto) < 7:
+    num = getnumber()
+    if lotto.count(num) ==0:
+        lotto.append(num)
+   
+lotto.sort()
+print("당첨번호는 %s입니다!"%(lotto))
+
