@@ -169,3 +169,142 @@ mycar3.upspeed(200)
 print("자동차 1의 색상은 %s이며, 현재 속도는 %dkm입니다."%(mycar1.color, mycar1.speed))
 print("자동차 2의 색상은 %s이며, 현재 속도는 %dkm입니다."%(mycar2.color, mycar2.speed))
 print("자동차 3의 색상은 %s이며, 현재 속도는 %dkm입니다."%(mycar3.color, mycar3.speed))
+
+
+
+#클래스 선언부에서 생성자 선언해주기 
+class car:
+    color =""
+    speed=0
+    def __init__(self):
+        self.color = "빨강"
+        self.speed = 0
+    def upspeed(self, value):
+        self.speed+=value
+        
+    def downspeed(self, value):
+        self.speed-=value
+        
+        
+        
+#매개변수가 있는 생성자로 선언
+        
+class car:
+    def __init__(self, va1, va2):
+        self.color = va1
+        self.speed = va2
+        
+mycar1 = car("빨강", 200)
+print(mycar1.color,mycar1.speed)
+
+
+#car_final
+import carfinal as car
+
+car1 = car.car("아우디", 0)
+car2 = car.car("벤츠", 30)
+print(car1.getname(), car1.getspeed())
+print(car2.getname(), car2.getspeed())
+
+
+#인스턴스 변수와 클래스 변수는, 변수처리가 외부에서 이뤄지는지, 클래스 내부에서
+#이뤄지는지 확인해야한다.
+class car :
+    color=""
+    speed = 0
+    count = 0
+      
+    def __init__(self, name, speed):
+        self.name = name
+        self.speed=speed
+        car.count +=1
+        
+    def upspeed(self, value):
+        self.speed+=value
+        print("%s --> 현재 속도(슈퍼클래스) : %dkm, 전체 차량수 = %d"%(self.name, self.speed, car.count))
+           
+    def downspeed(self, value):
+        self.speed-=value
+        
+
+#슈퍼클래스 car->  세단 클래스 오버라이딩
+class sedan(car):
+    def upspeed(self, value):
+        self.speed+=value
+        
+        if self.speed >= 150:
+            self.speed = 150
+            print("%s --> 현재 속도(서브클래스) : %dkm, 전체 차량수 = %d"% (self.name, self.speed, car.count))
+
+#서브클래스 sedan-> 소나타 클래스 오버라이팅 
+class sonata(sedan):
+    pass
+
+
+#슈퍼클래스 car-> 트럭클래스 오버라이딩
+class cartruck(car):
+    tons = 0
+    def tonecheck(self):
+        print("%s의 화물 무게 = %.1f"%(self.name, self.tons)) 
+        #클래스 호출한 객체에서 변수조정이 이뤄지기 떄문에 인스턴스 변수이다. 
+        
+
+truck1 = cartruck("트럭", 200)
+truck1.tons = 1.5
+truck1.tonecheck()
+sedan1 = sedan("승용차", 150)
+sonata1 = sonata("소나타", 150)
+truck1.upspeed(0)
+sedan1.upspeed(300)
+sonata1.upspeed(100)
+#세단과 소나타 클래스는 속도제한 조건문을 넣어주었다. 
+
+
+"""문제풀기"""
+#1번
+
+class car:
+    color = ""
+    speed = 0
+    
+    def upSpeed(self, value):
+        self.speed += value
+        
+    def downSpeed(self, value):
+        self.speed -=value
+        
+#2번
+
+class car:
+    color = ""
+    speed = 0
+
+myCar1= car()
+myCar1.color ="빨강"
+myCar1.speed = 30
+print("자동차 1의 색상은 %s이며, 현재 속도는 %dkm 입니다."%(myCar1.color, myCar1.speed))
+
+
+#3번
+
+class Car:
+    speed = 0
+    def __init__():
+        Car.speed = 50
+        
+        
+
+#4번
+        
+class car:
+    speed = 0
+    
+    def upSpeed(self, value):
+        self.speed = self.speed+ value
+        
+        
+class RVcar(car):
+    seatNum = 0
+    
+    def getseatnum(self):
+        return self.seatNum
