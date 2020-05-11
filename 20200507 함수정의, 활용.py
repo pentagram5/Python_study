@@ -149,3 +149,9 @@ import module1 as md
 md.func1()
 md.func2()
 md.func3()
+
+import 20200511 class as cl
+
+
+
+
