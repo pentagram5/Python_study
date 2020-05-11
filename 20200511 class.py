@@ -114,3 +114,58 @@ a.sub()
 a.div()
 a.mul()
 a.pow()
+
+
+
+#클래스 변수
+
+class Family:
+    lastname = "김"
+    
+print(Family.lastname)#직접 클래스의 변수를 불러올 수 있고,
+a = Family()# a객체를 생성한뒤에 변수이름을 직접호출할 수도 있다.
+a.lastname
+Family.lastname = "박"
+a.lastname
+#클래스외부에서 변수내용 변경가능
+
+
+#자동차 클래스 만들어보기
+class car:
+    color =""
+    speed=0
+    def upspeed(self, value):
+        self.speed+=value
+        
+    def downspeed(self, value):
+        self.speed-=value
+        
+mycar1= car()
+mycar2= car()
+mycar3= car()
+     
+mycar1.color = "빨강"
+mycar2.color = "파랑"
+mycar3.color = "노랑"  
+
+mycar1.upspeed(30)
+mycar2.upspeed(60)
+print("자동차 1의 색상은 %s이며, 현재 속도는 %dkm입니다."%(mycar1.color, mycar1.speed))
+print("자동차 2의 색상은 %s이며, 현재 속도는 %dkm입니다."%(mycar2.color, mycar2.speed))
+print("자동차 3의 색상은 %s이며, 현재 속도는 %dkm입니다."%(mycar3.color, mycar3.speed))
+
+#모듈화 하여 호출하고, 속도가 150 이상일 경우 속도 고정하기 
+import code12 as car_code
+
+mycar1 = car_code.car()
+mycar2 = car_code.car()
+mycar3 = car_code.car()
+mycar1.color = "빨강"
+mycar2.color = "파랑"
+mycar3.color = "노랑"  
+mycar1.upspeed(30)
+mycar2.upspeed(60)
+mycar3.upspeed(200)
+print("자동차 1의 색상은 %s이며, 현재 속도는 %dkm입니다."%(mycar1.color, mycar1.speed))
+print("자동차 2의 색상은 %s이며, 현재 속도는 %dkm입니다."%(mycar2.color, mycar2.speed))
+print("자동차 3의 색상은 %s이며, 현재 속도는 %dkm입니다."%(mycar3.color, mycar3.speed))
