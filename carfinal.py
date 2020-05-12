@@ -21,5 +21,7 @@ class car:
     def upspeed(self, value):
         self.speed+=value
         print("현재 속도(슈퍼클래스) : %d"%self.speed)
+        
+        
     def downspeed(self, value):
         self.speed-=value
