@@ -67,12 +67,68 @@ id(a)
 b=a
 id(b)
 
+
 #int
 int('1a', 16)
 int('743', 8)
+
 
 #isinstance 특정 객체가 특정 클래스의 인스턴스인지 확인하는 기능
 class person:pass
 a = person()
 isinstance(a,person)
 
+
+#lambda-> 함수를 한 줄로 간결하게 만들때 사용
+sum = lambda a,b: a+b
+sum(3,4)
+
+mylist = [lambda a,b:a+b, lambda a,b:a*b]
+mylist[0](3,4)
+mylist[1](2,5)
+
+#list 함수- 튜플이나 문자열을 리스트로
+list("python")
+list((1,2,3))
+
+
+#map(f,iterable)
+#입력받은 각 자료형의 요소가 함수 f에 의해 수행된 결과를 묶어서 리턴하는 함수
+list(map(lambda x: x*2, [1,2,3,4]))
+
+#max -> 가장 큰값을 리턴
+max([2,46,1,23])
+
+#oct-> 정수형태를 8진수 문자열로
+oct(3425)
+
+
+#open -> mode w:쓰기모드, r:읽기모드, a:추가모드
+
+#ord-> 문자열의 아스키 코드값을 리턴
+ord('a')
+
+
+#pow-> 제곱한 결과를 리턴
+pow(2,3)
+
+
+#range-> 범위지정함수
+list(range(5))
+list(range(1,4,2))
+
+
+#str->문자혈 형태로 객체 반환
+str('hi'.upper())#대문자변환
+
+
+#tuple->문자열이나 리스트를 튜플형태로 변환
+tuple("abc")
+tuple([1,23,4])
+
+
+#zip 동일한 개수로 이루어진 자료형을 묶어주는 역할->like tuple format
+list(zip([1,2,3],[4,5,6]))
+
+
+)
